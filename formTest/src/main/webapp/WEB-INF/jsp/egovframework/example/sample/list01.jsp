@@ -12,7 +12,7 @@
 
 <table border="1">
 	<tr>
-		<th>이름</th>
+		<th>이름TEST</th>
 		<th>나이</th>
 		<th>연락처</th>
 		<th>국적</th>
