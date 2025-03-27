@@ -1,8 +1,4 @@
-formTest/target/classes/egovframework/spring
-formTest/target/classes/egovframework/sqlmap
-formTest/target/classes/db/sampledb
-formTest/target/classes/log4j2.xml
-formTest/target/m2e-wtp/web-resources/META-INF/maven/formTest/formTest/pom.properties
+/target/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/eclipse
 # Edit at https://www.toptal.com/developers/gitignore?templates=eclipse
