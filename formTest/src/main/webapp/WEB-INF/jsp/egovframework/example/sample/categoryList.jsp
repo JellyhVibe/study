@@ -14,7 +14,7 @@
 $(document).ready(function(){
 
 	$("#categoryListCreate").click(function(){
-		location.href = '/categoryListCreate.do';
+		location.href = '/categoryList02.do';
 	});
 });
 
@@ -22,19 +22,19 @@ $(document).ready(function(){
 
 <input id="categoryListCreate" type="button" value="등록" />
 
-<form id="categoryTable" neme="categoryTable" method="POST">
-	<table border="1">
-		<tr>
-			<th>카테고리ID</th>
-			<th>카테고리 명</th>
-		</tr>
-<%--   		<c:foreach var="category" items="${categoryList}">
+<table border="1">
+	<tr>
+		<th>카테고리ID</th>
+		<th>카테고리 명</th>
+	</tr>
+  		<c:forEach items="${categoryList}" var="category" >
 			<tr>
-				<td>${category}</td>
+				<td><c:out value="${category.category_id}" /></td>
+				<td><c:out value="${category.category_nm}" /></td>
 			</tr>
-		</c:foreach>
- --%>	</table>
-</form>
+		</c:forEach>
+</table>
+
 	
 </body>
 </html>

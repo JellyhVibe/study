@@ -26,21 +26,25 @@ public class CategoryListController {
 		List<?> categoryList = categoryListService.selectCategoryList();
 		model.addAttribute("categoryList", categoryList);
 		
-		/* 카테고리 명 insert */
-		String name = categoryListService.insertCategoryName(category_nm);
-		model.addAttribute("name", name);
-		
 		log.info("categoryList : {}", categoryList);
 		
-		
 		return "sample/categoryList";
+	}
+
+	/* 카테고리 insert */
+	@RequestMapping(value = "/insertCategoryList.do")
+	public String insertCategoryListPage(String category_nm) {
+		categoryListService.insertCategoryName(category_nm);
+		
+		return "forward:/categoryList.do";
 	}
 	
 	/* 카테고리 수정 */
 	@RequestMapping("/updateCategory.do")
 	public String updateCategory(int category_id, String category_nm) {
+		categoryListService.updateCategory(category_id, category_nm);
 		
-		return"forward:/categoryList.do";
+		return "forward:/categoryList.do";
 	}
 	
 	/* 카테고리 삭제 */

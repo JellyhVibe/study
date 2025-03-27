@@ -12,7 +12,7 @@ public class CategoryListServicelmpl{
 	@Resource(name="categoryListMapper")
 	private CategoryListMapper categoryDAO;
 	
-	/* 카테고리리스트 출력 */
+	/* 카테고리 리스트 출력 */
 	public List<?> selectCategoryList(){
 		return categoryDAO.selectCategoryList();
 	}
