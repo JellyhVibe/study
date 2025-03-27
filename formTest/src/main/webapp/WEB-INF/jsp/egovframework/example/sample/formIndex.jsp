@@ -27,6 +27,10 @@
 		$("#list02").click(function(){
 			location.href = '/list02.do';
 		});
+		
+		$("#categoryList").click(function(){
+			location.href = '/categoryList.do'
+		});
 
 	});
 	
@@ -44,6 +48,9 @@
 	</li>
 	<li>
 		<input id="list02" type="button" value="list02" />
+	</li>
+	<li>
+		<input id="categoryList" type="button" value="categoryList" />
 	</li>
 
 </ul>

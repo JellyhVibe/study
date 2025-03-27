@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="egovframework.example.sample.service.impl.CategoryListMapper">
 
-	<select id="selectCategoryList" resultType="egovframework.example.sample.service.CategoryListService">
-		select * from category
+	<!-- 카테고리 리스트 출력 -->
+	<select id="selectCategoryList" resultType="Map">
+		select * from siana.category
 	</select>
+	
+	<!-- 카테고리 명 삽입 -->
+	<insert id="insertCategoryName">
+		insert into siana.category(category_id)
+		values (#{category_nm})
+	</insert>
+	
+	<!-- 카테고리 명 수정 -->
+	<update id="updateCategoryName">
+		update siana.category
+		set name=#{category_nm}
+		where id=#{category_id}
+	</update>
 
+	<!-- 카테고리 삭제 -->
+	<delete id="deleteCategoryId">
+		delete from siana.category
+		where id=#{category_id}
+	</delete>
+	
 </mapper>
