@@ -62,7 +62,7 @@ public class FormController {
 	 * @param map
 	 * @return
 	 */
-	@RequestMapping(value = "/getFrom.do", method=(RequestMethod.POST))
+	@RequestMapping(value = "/getForm.do", method=(RequestMethod.POST))
 	public String getFrom(Model model, @RequestParam Map<String, Object> map) {
 		
 		model.addAttribute("map", map);

@@ -68,7 +68,7 @@
 				return false;
 			}
 			
- 			$("#testForm").attr("action", "/getFrom.do").submit();
+ 			$("#testForm").attr("action", "/getForm.do").submit();
 		}
 		
 		//버튼 등록,수정버튼 show & hide

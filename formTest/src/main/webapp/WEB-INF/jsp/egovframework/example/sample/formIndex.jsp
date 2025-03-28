@@ -52,7 +52,6 @@
 	<li>
 		<input id="categoryList" type="button" value="categoryList" />
 	</li>
-
 </ul>
 
 </body>
